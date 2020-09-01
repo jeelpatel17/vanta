@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanta JS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Passion+One&display=swap" rel="stylesheet">
+    <style>
+        ::selection{
+            background: #000;
+            color: lawngreen;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            transition: all .3s ease;
+            box-sizing: border-box;
+        }
+        html{
+            background: #000;
+        }
+        body{
+            font-family: passion one, cursive;
+            height: 100vh;
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgba(124, 252, 0, 1);
+            font-size: 6rem;
+            text-align: center;
+            text-shadow: 2px 2px 13px lawngreen;
+        }
+        h1{
+            animation: glow 13s ease infinite;
+        }
+
+        @keyframes glow{
+            0%{letter-spacing: 1px;}
+            50%{letter-spacing: 40px;}
+            100%{letter-spacing: 1px;}
+        }
+        @media screen  and (max-width: 748px){
+            body{font-size: 4rem;}
+        }
+        @media screen  and (max-width: 500px){
+            body{font-size: 2.5rem;}
+            h1{animation: none;}
+        }
+        @media screen  and (max-width: 314px){
+            body{font-size: 2rem;}
+        }
+        @media screen  and (max-width: 250px){
+            body{font-size: 1.5rem;}
+        }
+    </style>
+</head>
+<body>
+    <h1 id="h1">JEEL PATEL</h1>
+    <script src="three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.18/vanta.birds.min.js" integrity="sha512-8/woRaNDhf91n0EQkxRZSmbhurqmwWJUwAcCU+inYG1JoDCaFZBThdD+KU6ZwEU5WhwArjccWrjR+AuRAxc6ZA==" crossorigin="anonymous"></script>
+    <script>
+        VANTA.BIRDS({
+            el: "body",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: true,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color1: 0xffa4,
+            colorMode: "lerp",
+            wingSpan: 23.00,
+            alignment: 36.00
+        })
+    </script>
+</body>
+
+</html>
